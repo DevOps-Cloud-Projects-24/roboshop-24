@@ -4,7 +4,9 @@ dnf module disable nodejs -y
 dnf module enable nodejs:20 -y
 dnf install nodejs -y
 useradd roboshop
+rm -rf /app
 mkdir /app
+
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip
 cd /app
 unzip /tmp/catalogue.zip
@@ -15,4 +17,4 @@ systemctl enable catalogue
 systemctl start catalogue
 
 dnf install mongodb-mongosh -y
-mongosh --host localhost </app/db/master-data.js
+mongosh --host 172.31.81.157 </app/db/master-data.js
