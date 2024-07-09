@@ -1,10 +1,6 @@
 source common.sh
-
 component=catalogue
+app_path=/app
+schema_setup=mongo
+
 NODEJS
-
-
-dnf install mongodb-mongosh -y
-STAT $?
-mongosh --host mongo.dev.idevops24.online </app/db/master-data.js
-STAT $?
