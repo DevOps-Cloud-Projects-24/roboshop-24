@@ -1,7 +1,5 @@
-
-
 source common.sh
-
 component=user
-NODEJS
+app_path=/app
 
+NODEJS
