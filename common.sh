@@ -11,6 +11,7 @@ STAT(){
     echo -e "\e[32m SUCCESS\e[0m" #here 31m is red, 32m is green
   else
     echo -e "\e[31m FAILURE\e[0m"
+    exit $1
   fi
 }
 
